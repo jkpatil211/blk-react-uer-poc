@@ -1,0 +1,98 @@
+.tiles-block {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.tiles-block .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 96px;
+}
+
+.tiles-block .tile:nth-child(odd) {
+    padding-right: 20px;
+}
+
+.tiles-block .tile {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.tile .content-wrapper {
+    background-color: #fff;
+    box-shadow: 0 0 12px 0 rgba(112,112,112,.5);
+}
+
+.tile .tile-content {
+    padding: 96px 40px 103px;
+}
+
+.tile .headline {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+    padding-bottom: 32px;
+}
+
+.tile .sub-headline {
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 16px;
+    font-weight: 700;
+}
+
+.tile .description {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.tile .description p {
+    font-size: 14px;
+    color: #131212;
+    font-weight: 400;
+}
+
+.tile .cta-container-box {
+    position: absolute;
+    bottom: 10px;
+}
+
+.tile .cta {
+    box-sizing: inherit;
+}
+
+.tile .cta.button {
+    border-color: #000;
+    background-color: #000;
+    margin-bottom: 0;
+    padding: 12px 24px;
+    border-radius: 0;
+}
+
+a.cta.button {
+    text-decoration: none;
+}
+
+.cta.button .label {
+    color: #fff;
+}
+
+.cta .label {
+    font-size: 16px;
+    line-height: 22px;
+    text-transform: none;
+    font-weight: 800;
+}
+
+.cta.button .icon {
+    display: inline-block;
+    float: none;
+    margin: auto 8px auto 0;
+    color: #ff4713;
+}
