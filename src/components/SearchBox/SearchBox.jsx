@@ -6,9 +6,9 @@ const SearchBox = () => {
     return (
         <div className="searchbox">
             <div className="search-form-container searchBar-color-white">
-                <input type="text" id="searchTextOpt" name="searchText" maxlength="500" data-enableautocomplete="true"
+                <input type="text" id="searchTextOpt" name="searchText" maxLength={500} data-enableautocomplete="true"
                     placeholder="Search for a fund or ticker"
-                    className="searchBar-color-white search-text-freeform-variant ticker ui-autocomplete-input" autocomplete="off"
+                    className="searchBar-color-white search-text-freeform-variant ticker ui-autocomplete-input" autoComplete="off"
                 />
                 <div className="fa-search">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />

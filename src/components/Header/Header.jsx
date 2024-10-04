@@ -1,6 +1,4 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
@@ -9,8 +7,6 @@ import { Col, Row } from "react-bootstrap";
 
 import './Header.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLocation } from '@fortawesome/free-solid-svg-icons/faLocation';
-import { faMapMarker } from '@fortawesome/free-solid-svg-icons/faMapMarker';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle';
 import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
