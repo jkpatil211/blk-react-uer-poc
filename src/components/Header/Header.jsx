@@ -1,21 +1,28 @@
-import React from "react";
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import BlkIcon from '../assets/blackrock-logo-sitemap.svg'
+import BlkIcon from '../../assets/blackrock-logo-sitemap.svg'
 import { Col, Row } from "react-bootstrap";
+
+import './Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocation } from '@fortawesome/free-solid-svg-icons/faLocation';
+import { faMapMarker } from '@fortawesome/free-solid-svg-icons/faMapMarker';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons/faLocationDot';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle';
+import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
 
 const Header = () => {
     let expand = 'xl';
     return (
         <Row style={{boxShadow: "-1px 3px 5px -3px #a5a1a1"}}>
-            <Col>
+            <Col lg={11} sm={11} xs={11}  className="mx-auto">
                 <Navbar expand={expand} className="bg-body-primary mt-4 pb-3">
                     <Container fluid>
-                        <Navbar.Brand href="#">
+                        <Navbar.Brand className="col-2" href="#">
                             <img src={BlkIcon} />
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -30,12 +37,27 @@ const Header = () => {
                                 </Offcanvas.Title>
                             </Offcanvas.Header>
                             <Offcanvas.Body>
-                                <Nav className="justify-content-start flex-grow-1 pe-3">
+                                <Nav className="justify-content-start flex-grow-1 pe-3 menu">
                                     <Nav.Link href="#action1">About us</Nav.Link>
                                     <Nav.Link href="#action2">Funds</Nav.Link>
                                     <Nav.Link href="#action2">Solutions</Nav.Link>
                                 </Nav>
-                                <Form className="d-flex">
+                                <div className="searchContainer">
+                                    <div className="search-inline-container">
+                                        <input className="nav-search" type="text" placeholder="Enter fund or keyword" />
+                                        <div className="search-icon">
+                                            <FontAwesomeIcon icon={faSearch} />
+                                        </div>
+                                        
+                                    </div>
+                                    {/* <div> */}
+                                        <FontAwesomeIcon icon={faLocationDot} size="xl" fontWeight="bold"  />
+                                    {/* </div> */}
+                                    {/* <div> */}
+                                        <FontAwesomeIcon icon={faUserCircle} size="xl" fontWeight="bold" />
+                                    {/* </div> */}
+                                </div>
+                                {/* <Form className="d-flex">
                                     <Form.Control
                                         type="search"
                                         placeholder="Search"
@@ -43,7 +65,7 @@ const Header = () => {
                                         aria-label="Search"
                                     />
                                     <Button variant="outline-success">Search</Button>
-                                </Form>
+                                </Form> */}
                             </Offcanvas.Body>
                         </Navbar.Offcanvas>
                     </Container>
