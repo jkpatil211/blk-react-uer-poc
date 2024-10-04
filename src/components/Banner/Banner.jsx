@@ -5,14 +5,15 @@ import UnderLine from '../UnderLine';
 
 import SearchBox from "../SearchBox/SearchBox";
 import FundServices from "../FundServices/FundServices";
+import withTextAemAttributes from "../../hoc/withTextAemAttributes";
 
 const Banner = () => {
     return (
         <Row className="banner py-5">
             <Col lg={11} sm={11} xs={11} className="mx-auto py-5">
                 <Stack gap={3} className="">
-                    <div className="eyebrow">
-                        Funds at Blackrock
+                    <div className="eyebrow" data-aue-type="text" data-aue-prop="jcr:title">
+                        Funds at Blackrock!
                         <UnderLine />
                     </div>
                     <div className="headline col-xl-10 col-sm-11 col-xs-11 fs-xs-1">
