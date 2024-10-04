@@ -1,0 +1,104 @@
+.sitemap {
+    background: #161616;
+    color: #fff;
+}
+
+.combined-with-nav {
+    position: relative;
+    /* overflow: hidden; */
+    padding: 56px 0 64px 0;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    
+        .clickable-item {
+            font: 12px / 16px FortBook, Arial, sans-serif;
+            color: #fff;
+        }
+    
+        a {
+            text-decoration: none;
+        }
+
+        li.bottom-links {
+            padding-top: 16px;
+
+            .clickable-item {
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 16px;
+            }
+
+        }
+    }
+
+    .viewAllIcon {
+        color: red;
+        margin-left: 7px;
+    } 
+
+    .sitemap__column__header span {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: bolder;
+    }
+
+    .l2-header {
+        
+        text-transform: none;
+        border-bottom: 1px solid #616161;
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+        font-weight: bold;
+    }
+
+    .l3-header {
+        /* font: 12px / 20px FortBold, Arial, sans-serif; */
+        font-size: 12px;
+        line-height: 20px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        font-weight: bold;
+    }
+}
+
+.l3-item-container li:nth-child(n+4) .l3-header {
+    margin-top: 32px;
+}
+
+.combined-with-nav .multibrand-sitemap__wrapper .multibrand-sitemap__row .sitemap__column__header {
+    border-bottom: 2px solid #fff;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+}
+
+.multibrand-sitemap__overlay.always-visible {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 56px;
+    padding-bottom: 32px;
+
+    .explore-more-btn {
+        padding: 12px 24px;
+        border: 1px solid #fff;
+        border-radius: 2px;
+        display: block;
+        margin: auto;
+        background: #161616;
+        color: #fff;
+        cursor: pointer;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        position: relative;
+        
+        .label {
+            font-weight: bolder;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
