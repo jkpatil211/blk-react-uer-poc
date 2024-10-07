@@ -14,8 +14,8 @@ const Headline = () => {
             <div
                 className="headline col-xl-10 col-sm-11 col-xs-11 fs-xs-1 my-5"
                 data-aue-type="text"
-                data-aue-prop="first-rte"
-                data-aue-label="heading"
+                data-aue-prop="firstRte"
+                data-aue-label="first-rte"
             >
                 Funds that match up with investing goals and preferences
             </div>
