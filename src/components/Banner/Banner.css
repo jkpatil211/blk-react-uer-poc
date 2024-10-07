@@ -4,19 +4,3 @@
     background-color: #f4f1eb;
     margin-top: 2px;
 }
-.eyebrow {
-    font: 12px / 39px "Montserrat", Arial, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 800;
-}
-
-.headline {
-    font: 56px / 64px "Montserrat", Arial, sans-serif;
-    font-weight: 800;
-}
-
-.intro {
-    font: 20px / 28px "Montserrat", Arial, sans-serif;
-    margin: 30px 0;
-}
