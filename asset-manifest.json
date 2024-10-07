@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/blk-react-uer-poc/static/css/main.90179715.css",
-    "main.js": "/blk-react-uer-poc/static/js/main.dfe91905.js",
+    "main.js": "/blk-react-uer-poc/static/js/main.c8a9252c.js",
     "static/media/blackrock-logo-sitemap.svg": "/blk-react-uer-poc/static/media/blackrock-logo-sitemap.2f84b998eb0c0a5c99cadeb53752ae16.svg",
     "index.html": "/blk-react-uer-poc/index.html",
     "main.90179715.css.map": "/blk-react-uer-poc/static/css/main.90179715.css.map",
-    "main.dfe91905.js.map": "/blk-react-uer-poc/static/js/main.dfe91905.js.map"
+    "main.c8a9252c.js.map": "/blk-react-uer-poc/static/js/main.c8a9252c.js.map"
   },
   "entrypoints": [
     "static/css/main.90179715.css",
-    "static/js/main.dfe91905.js"
+    "static/js/main.c8a9252c.js"
   ]
 }
