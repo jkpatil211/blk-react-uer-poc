@@ -2,3 +2,12 @@
   margin-left: 80px !important;
   margin-right: 80px !important;
 }
+
+.loading {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  z-index: 999;
+}
