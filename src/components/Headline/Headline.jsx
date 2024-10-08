@@ -1,7 +1,11 @@
+import useGraphQL from "../../services/useGraphQL";
 import UnderLine from "../UnderLine";
 import './Headline.css'
 
 const Headline = () => {
+    const { data, errorMessage } = useGraphQL('POC/allCards');
+    console.log('data-->', data);
+    console.log('err-->', errorMessage);
     return (
         <div
             data-aue-resource="urn:aemconnection:/content/dam/projects/poc/banner-headline/jcr:content/data/master"
