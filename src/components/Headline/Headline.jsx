@@ -4,21 +4,12 @@ import Loading from "../Loading";
 import UnderLine from "../UnderLine";
 import './Headline.css'
 
-const Headline = () => {
-    const { data, errorMessage } = useBannerHeadline();
+const Headline = ({ headline = '', title = '', description = {} }) => {
 
-    if(errorMessage) return;
-    
-    if(!data) return <Loading />;
-
-    console.log('data in headline-->', data);
     return (
-        <div
-            data-aue-resource={`urn:aemconnection:${data?._path}/jcr:content/data/master`}
-            data-aue-type="reference"
-        >
+        <>
             <div>
-                <h2 className="eyebrow" data-aue-type="text" data-aue-prop="headline" data-aue-label="headline">{data?.headline}</h2>
+                <h2 className="eyebrow" data-aue-type="text" data-aue-prop="headline" data-aue-label="headline">{headline}</h2>
                 <UnderLine />
             </div>
             <div
@@ -27,18 +18,18 @@ const Headline = () => {
                 data-aue-prop="title"
                 data-aue-label="title"
             >
-                {data?.title}
+                {title}
             </div>
             <div
-                className="intro col-xl-6 col-lg-6 fw-medium"
+                className="intro col-xl-7 col-lg-7 fw-medium"
                 data-aue-type="richtext"
                 data-aue-prop="description"
                 data-aue-label="description"
-                dangerouslySetInnerHTML={{__html: data?.description?.html}}
+                dangerouslySetInnerHTML={{__html: description?.html}}
             >
                 {/* {mapJsonRichText(data?.description?.json)} */}
             </div>
-        </div>
+        </>
     );
 };
 
