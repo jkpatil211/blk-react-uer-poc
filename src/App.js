@@ -1,5 +1,4 @@
 import { HelmetProvider, Helmet } from 'react-helmet-async';
-import { getAuthorHostUrl } from './services/url';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from './components/Header/Header';
@@ -20,8 +19,8 @@ function App() {
                 src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"
                 async
             />
-            <meta name="urn:adobe:aue:system:aemconnection" content={`aem:${getAuthorHostUrl()}`} />
-            {/* <meta name="urn:adobe:aue:config:extensions" content="https://47679-workflowextension.adobeio-static.net" /> */}
+            <meta name="urn:adobe:aue:system:aemconnection" content={`aem:${process.env.REACT_APP_AUTHOR_HOST}`} />
+            <meta name="urn:adobe:aue:config:extensions" content="https://47679-workflowextension.adobeio-static.net" />
         </Helmet>
         <Header />
         <Banner />
