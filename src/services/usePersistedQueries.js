@@ -35,7 +35,8 @@ async function fetchPersistedQuery(persistedQueryName, queryParameters) {
   try {
     // AEM GraphQL queries are asynchronous, either await their return or use Promise-based .then(..) { ... } syntax
     const response = await aemHeadlessClient.runPersistedQuery(
-      persistedQueryName,
+      // Adding Date.now() to refresh the cache
+      `${persistedQueryName}?${Date.now()}`,
       queryParameters
     );
     // The GraphQL data is stored on the response's data field
