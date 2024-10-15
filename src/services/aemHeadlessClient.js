@@ -25,7 +25,9 @@ const {
 // In a production application the serviceURL should be set to the production AEM Publish environment
 // In development the serviceURL can be set to '/' which will be a relative proxy is used (see ../authMethods.js) to avoid CORS issues
 
-const serviceURL = REACT_APP_USE_PROXY === "true" ? "/" : REACT_APP_AUTHOR_HOST;
+// const serviceURL = REACT_APP_USE_PROXY === "true" ? "/" : REACT_APP_AUTHOR_HOST;
+
+const serviceURL = REACT_APP_AUTH_METHOD ? REACT_APP_AUTHOR_HOST : REACT_APP_PUBLISH_HOST
 
 
 // Get authorization based on environment variables

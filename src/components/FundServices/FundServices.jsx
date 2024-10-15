@@ -2,10 +2,12 @@ import './FundServices.css';
 import Fund from './Fund';
 import { useAllFundServices } from '../../services/usePersistedQueries';
 import Loading from '../Loading';
+import ErrorMessage from '../ErrorMessage';
 
 const FundServices = () => {
-    const { data, error } = useAllFundServices();
-    if (error) return;
+    const { data, errorMessage } = useAllFundServices();
+
+    if (errorMessage) return <ErrorMessage message={errorMessage} />;
 
     if (!data) return <Loading />
 

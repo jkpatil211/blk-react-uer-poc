@@ -1,6 +1,4 @@
 import { mapJsonRichText } from "../../services/renderRichText";
-import { useBannerHeadline } from "../../services/usePersistedQueries";
-import Loading from "../Loading";
 import UnderLine from "../UnderLine";
 import './Headline.css'
 

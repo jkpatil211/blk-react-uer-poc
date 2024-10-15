@@ -20,8 +20,8 @@ function App() {
                 src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"
                 async
             />
-            <meta name="urn:adobe:aue:system:aemconnection" content={`aem:${getAuthorHostUrl()}`} data-rh="true" />
-            <meta name="urn:adobe:aue:config:extensions" content="https://47679-workflowextension.adobeio-static.net" data-rh="true" />
+            <meta name="urn:adobe:aue:system:aemconnection" content={`aem:${getAuthorHostUrl()}`} />
+            {/* <meta name="urn:adobe:aue:config:extensions" content="https://47679-workflowextension.adobeio-static.net" /> */}
         </Helmet>
         <Header />
         <Banner />
