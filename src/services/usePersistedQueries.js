@@ -55,12 +55,12 @@ export function useAllFundServices() {
 
   useEffect(() => {
     (async function() {
-      const { data, error } = await fetchPersistedQuery('POC/allFundServices');
+      const response = await fetchPersistedQuery('POC/allFundServices');
 
-      if (error) {
-        setErrorMessage(error);
+      if (response?.error) {
+        setErrorMessage(response?.error);
       } else {
-        setData(data?.cardsList?.items);
+        setData(response?.data?.cardsList?.items);
       }
     })();
   }, []);
@@ -68,21 +68,20 @@ export function useAllFundServices() {
   return { data, errorMessage };
 }
 
-export function useBannerHeadline() {
+export function useFetchPersistedQuery(path, queryModelName) {
   const [data, setData] = useState(null);
   const [errorMessage, setErrorMessage] = useState(null);
 
   useEffect(() => {
-    (async function(){
-      const { data, error } = await fetchPersistedQuery('POC/bannerHeadline');
-  
-      if (error) {
-        setErrorMessage(error);
+    (async function() {
+      const response = await fetchPersistedQuery(path);
+      if (response?.error) {
+        setErrorMessage(response?.error);
       } else {
-        setData(data?.bannerHeadlineCardByPath?.item);
+        setData(response?.data?.[queryModelName]?.item);
       }
     })();
-  }, []);
+  }, [path, queryModelName]);
 
   return { data, errorMessage };
-}
+};

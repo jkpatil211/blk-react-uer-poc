@@ -6,6 +6,8 @@ import Banner from './components/Banner/Banner';
 import { Container } from 'react-bootstrap';
 import './App.css';
 import Sitemap from './components/Sitemap/Sitemap';
+import Teaser from './components/Teaser/Teaser';
+import ContentFragment from './components/ContentFragment/ContentFragment';
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
         </Helmet>
         <Header />
         <Banner />
+        <ContentFragment fragmentName="teaser" path="POC/imageWithTextByPath" queryModelName="imageWithTextByPath" component={Teaser} />
         <Sitemap />
       </Container>
     </HelmetProvider>

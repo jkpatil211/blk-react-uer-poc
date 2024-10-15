@@ -1,13 +1,13 @@
-import { mapFragmentToComponent } from "../../services/fragmentMapper";
+import { useFetchPersistedQuery } from "../../services/usePersistedQueries";
 import ErrorMessage from "../ErrorMessage";
 import Loading from "../Loading";
 
-const ContentFragment = ({ fragmentName, component }) => {
-    const apiHook = mapFragmentToComponent?.[fragmentName]?.apiHook;
-    const { data, errorMessage } = apiHook();
-    if(errorMessage) return <ErrorMessage message={errorMessage} />;
+const ContentFragment = ({ fragmentName, path, queryModelName, component }) => {
+    const { data, errorMessage } = useFetchPersistedQuery(path, queryModelName);
+
+    if (errorMessage) return <ErrorMessage message={errorMessage} />;
     
-    if(!data) return <Loading />;
+    if (!data) return <Loading />;
 
     let title = data?._metadata?.stringMetadata.find(field => field.name === 'title')?.value || fragmentName;
     return (
