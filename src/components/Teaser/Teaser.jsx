@@ -12,6 +12,7 @@ const Teaser = (props) => {
                             {
                                 ['descriptionOne', 'descriptionTwo', 'descriptionThree'].map(aueProp => (
                                     <div
+                                        className="text-responsive"
                                         key={aueProp}
                                         data-aue-type="richtext"
                                         data-aue-prop={aueProp}

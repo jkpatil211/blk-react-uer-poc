@@ -9,6 +9,7 @@ it.
 
 // Use the AEM Headless SDK to make the GraphQL requests
 import AEMHeadless from "@adobe/aem-headless-client-js";
+import { getHostUrl } from "./url";
 
 // environment variable for configuring the headless client
 const {
@@ -27,8 +28,6 @@ const {
 
 // const serviceURL = REACT_APP_USE_PROXY === "true" ? "/" : REACT_APP_AUTHOR_HOST;
 
-const serviceURL = REACT_APP_AUTH_METHOD ? REACT_APP_AUTHOR_HOST : REACT_APP_PUBLISH_HOST
-
 
 // Get authorization based on environment variables
 // authorization is not needed when connecting to Publish environments
@@ -45,7 +44,7 @@ const setAuthorization = () => {
 
 // Initialize the AEM Headless Client and export it for other files to use
 const aemHeadlessClient = new AEMHeadless({
-  serviceURL: serviceURL,
+  serviceURL: getHostUrl(),
   endpoint: REACT_APP_GRAPHQL_ENDPOINT,
   auth: setAuthorization(),
 });

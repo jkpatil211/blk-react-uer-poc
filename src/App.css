@@ -11,3 +11,8 @@
   text-align: center;
   z-index: 999;
 }
+
+.text-responsive {
+  font-size: calc(89% + 0.2vw + 0.2vh);
+  line-height: calc(100% + 0.3vw + 0.3vh);
+}

@@ -16,7 +16,6 @@ const Banner = () => {
                     <SearchBox />
                     <FundServices />
                 </Stack>
-                
             </Col>
         </Row>
         
