@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/blk-react-uer-poc/static/css/main.6696f598.css",
-    "main.js": "/blk-react-uer-poc/static/js/main.4278d270.js",
+    "main.css": "/blk-react-uer-poc/static/css/main.904e4224.css",
+    "main.js": "/blk-react-uer-poc/static/js/main.c7825fc8.js",
     "static/media/blackrock-logo-sitemap.svg": "/blk-react-uer-poc/static/media/blackrock-logo-sitemap.d5cae9dd5dffdf841093382b81f586c9.svg",
     "index.html": "/blk-react-uer-poc/index.html",
     "static/media/icon-loading.svg": "/blk-react-uer-poc/static/media/icon-loading.a1678e08b93e147cc9fde0ef2906942a.svg",
-    "main.6696f598.css.map": "/blk-react-uer-poc/static/css/main.6696f598.css.map",
-    "main.4278d270.js.map": "/blk-react-uer-poc/static/js/main.4278d270.js.map"
+    "main.904e4224.css.map": "/blk-react-uer-poc/static/css/main.904e4224.css.map",
+    "main.c7825fc8.js.map": "/blk-react-uer-poc/static/js/main.c7825fc8.js.map"
   },
   "entrypoints": [
-    "static/css/main.6696f598.css",
-    "static/js/main.4278d270.js"
+    "static/css/main.904e4224.css",
+    "static/js/main.c7825fc8.js"
   ]
 }
