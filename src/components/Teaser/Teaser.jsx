@@ -3,7 +3,6 @@ import '../Teaser/Teaser.css';
 
 const Teaser = (props) => {
     return (
-        // <h2>Jay here</h2>
         <Row className="teaser">
             <Col lg={11} xl={11} sm={11} className="mx-auto py-5 px-2">
                 <Row>
@@ -25,7 +24,12 @@ const Teaser = (props) => {
                     </Col>
                     {/* Image */}
                     <Col lg={5} xl={5} sm={11}>
-                        <Image src={`${process.env.REACT_APP_PUBLISH_HOST}${props?.image?._path}`} fluid />
+                        <Image
+                            src={`${process.env.REACT_APP_PUBLISH_HOST}${props?.image?._path}`}
+                            data-aue-prop="image"
+                            data-aue-type="media"
+                            fluid
+                        />
                     </Col>
                 </Row>
             </Col>
