@@ -8,7 +8,8 @@ import './App.css';
 import Sitemap from './components/Sitemap/Sitemap';
 import Teaser from './components/Teaser/Teaser';
 import ContentFragment from './components/ContentFragment/ContentFragment';
-import { getHostUrl } from './services/url';
+
+const { REACT_APP_AUTHOR_HOST, REACT_APP_SHOW_TEASER } = process.env;
 
 function App() {
   return (
@@ -22,12 +23,12 @@ function App() {
                 src="https://universal-editor-service.experiencecloud.live/corslib/LATEST"
                 async
             />
-            <meta name="urn:adobe:aue:system:aemconnection" content={`aem:${getHostUrl()}`} />
+            <meta name="urn:adobe:aue:system:aemconnection" content={`aem:${REACT_APP_AUTHOR_HOST}`} />
             <meta name="urn:adobe:aue:config:extensions" content="https://47679-workflowextension.adobeio-static.net" />
         </Helmet>
         <Header />
         <Banner />
-        {process.env.REACT_APP_SHOW_TEASER && <ContentFragment fragmentName="teaser" path="POC/imageWithTextByPath" queryModelName="imageWithTextByPath" component={Teaser} />}
+        {REACT_APP_SHOW_TEASER && <ContentFragment fragmentName="teaser" path="POC/imageWithTextByPath" queryModelName="imageWithTextByPath" component={Teaser} />}
         <Sitemap />
       </Container>
     </HelmetProvider>
