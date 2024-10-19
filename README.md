@@ -2,6 +2,10 @@
 
 Click [https://jkpatil211.github.io/blk-react-uer-poc/](https://jkpatil211.github.io/blk-react-uer-poc/)
 
+## Using the sample POC
+ - git clone the app
+ - Update the values in .env file
+
 ## Available Scripts
 
 In the project directory, you can run:
